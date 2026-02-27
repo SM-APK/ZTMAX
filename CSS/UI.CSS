@@ -1,0 +1,378 @@
+/* ========== RESET ========== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html, body{
+    background:#000000;
+    color: white;
+    overflow-x:hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== HEADER ========== */
+.header-1007{
+    top: 0;
+    left: 0;
+    display: flex;
+    position:fixed;
+    width:2000px;
+    height: 100px;
+    background:#000000;
+    color:#fff;
+    z-index:1000;
+    gap: 460px;
+        backdrop-filter: blur(10px);
+    transition:transform 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.site-wrapper{
+    position: absolute;
+    width:2000px;
+    min-height:100vh;
+    transform-origin: top left;
+}
+/* TOP LOGO */
+.logo-container-1010{
+    padding:15px 40px;
+}
+
+.logo-1011{
+    height:45px;
+}
+
+/* NAVIGATION */
+.main-navigation-1012{
+    top: 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px 10px 40px;
+    gap: 350px;
+    font-size: 20px;
+}
+.left-menu-1013{
+    gap: 200px;
+}
+/* LEFT MENU */
+.menu-list-1014{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+.link-1016,
+.link-1018,
+.link-1020,
+.link-1022,
+.link-1024,
+.link-1026{
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+    position:relative;
+    padding:5px 0;
+    transition:color 0.3s;
+}
+
+/* Hover Underline Animation */
+.link-1016::after,
+.link-1018::after,
+.link-1020::after,
+.link-1022::after,
+.link-1024::after,
+.link-1026::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:0%;
+    height:2px;
+    background:#00f0ff;
+    transition:0.4s ease;
+}
+
+.link-1016:hover::after,
+.link-1018:hover::after,
+.link-1020:hover::after,
+.link-1022:hover::after,
+.link-1024:hover::after,
+.link-1026:hover::after{
+    width:100%;
+}
+
+.link-1016:hover,
+.link-1018:hover,
+.link-1020:hover,
+.link-1022:hover,
+.link-1024:hover,
+.link-1026:hover{
+    color:#00f0ff;
+}
+
+/* MENU BUTTON */
+.menu-btn-1028{
+    background:#00f0ff;
+    border:none;
+    padding:8px 20px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.menu-btn-1028:hover{
+    background:#00c8d6;
+}
+
+/* DROPDOWN */
+.dropdown-content-1029{
+    position:absolute;
+    right:40px;
+    top:100%;
+    background:rgb(22, 22, 22);
+    width:250px;
+    border-radius:10px;
+    display:none;
+    padding:10px 0;
+    animation:fadeIn 0.3s ease;
+}
+
+.dropdown-content-1029.active{
+    display:block;
+}
+
+.dropdown-list-1030{
+    list-style:none;
+}
+
+.dropdown-list-1030 li{
+    padding:15px 25px;
+        transition:0.3s;
+}
+
+.dropdown-list-1030 a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    transition:0.3s;
+}
+
+.dropdown-list-1030 a:hover{
+    color:#000;
+}
+.dropdown-list-1030 li:hover{
+    background:#00f0ff;
+    color:#000;
+    border-radius:10px;
+}
+
+/* BLUR EFFECT */
+.blur{
+    filter:blur(6px);
+    pointer-events:none;
+}
+
+/* TABS SECTION */
+.tabs-section-1041{
+    position: fixed;
+    top: 100px; /* header height */
+    width: 2000px;
+    background:#000000;
+    padding:15px 40px;
+    font-size: 20px;
+    z-index: 999;
+    transition: transform 0.4s ease;
+}
+
+.tabs-list-1042{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    color:#fff;
+}
+
+.tabs-list-1042 li{
+    position:relative;
+    cursor:pointer;
+}
+.tab-link-2000{
+    text-decoration:none;
+    color:#fff;
+    padding:5px 0;
+    display:inline-block;
+    position:relative;
+    transition:0.3s;
+}
+
+.tab-link-2000::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:0%;
+    height:2px;
+    background:#00f0ff;
+    transition:0.4s ease;
+}
+
+.tab-link-2000:hover::after{
+    width:100%;
+}
+
+.tab-link-2000:hover{
+    color:#00f0ff;
+}.tab-1043:hover .subtab-1044{
+    display:block;
+}
+
+/* MAIN CONTENT */
+.main-content-1054{
+    padding:180px 40px 80px 40px;
+}
+
+.heading-5678{
+    font-size:36px;
+    color:#ffffff;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.heading-5678::after{
+    content:'';
+    width:80px;
+    height:4px;
+    background:#00f0ff;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+}
+.home-section{
+    width: 1900px;
+    height: 550px;
+    padding: 30px 15px;
+    border-radius: 20px;
+    background-color: rgb(22, 22, 22);
+    color: white;
+
+    display: flex;
+    gap: 30px;
+}
+.home-section-text{
+    width: 1500px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-family:sans-serif;
+    letter-spacing: 2px;
+font-size: 30px;
+}
+.home-section-img   img{
+    border-radius: 20px;
+}
+
+
+/* FOOTER */
+.footer-1057{
+    background:#111;
+    color:#fff;
+    padding:40px;
+}
+
+.footer-links-1061{
+    margin-top:15px;
+}
+
+.footer-links-1061 a{
+    margin-right:20px;
+    color:#00f0ff;
+    text-decoration:none;
+}
+
+.footer-links-1061 a:hover{
+    text-decoration:underline;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(-10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+.dashboard{
+    width: 1920px;
+    height: 800px;
+    background-color: #000;
+    padding: 40px 40px;
+    border-radius: 40px;
+    box-shadow: 0 10px 20px rgb(51, 49, 49);
+    display: flex;
+    gap: 80px;
+}
+.dashboard-look{
+    width: 550px;
+    height: 300px;
+    background: rgb(22, 22, 22);
+    border-radius: 20px;
+
+}
+.dash-board-section-5{
+    position: absolute;
+    left: 100px;
+    top: 700px;
+}
+.dash-board-section-6{
+    position: absolute;
+    left: 725px;
+    top: 700px;
+}
+.dash-board-section-7{
+    position: absolute;
+    left: 1350px;
+    top: 700px;
+}
+.settings{
+    background-color: #000;
+    box-shadow: 5px 5px 25px rgb(22, 22, 22);
+    width: 1900px;
+    height: 1000px;
+    border-radius: 40px;
+padding: 100px 100px;
+display: flex;
+gap: 50px;
+}
+.setting-section{
+    background-color: rgb(22, 22, 22);
+    width: 850px;
+    height: 800px;
+    border-radius: 20px;
+    padding: 50px 50px;
+    
+}
+.setting-section-a{
+    content:'';
+    width:4px;
+    height:700px;
+    background:#00f0ff;
+    position:fixed;
+left: 165px;
+}
+.setting-section-b{
+    content:'';
+    width:4px;
+    height:700px;
+    background:#00f0ff;
+    position:fixed;
+right: 960px;
+}
+.setting-option{
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
