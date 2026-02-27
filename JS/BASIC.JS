@@ -22,12 +22,14 @@ const siteConfig = {
 
 tabs: [
     { name: "Home", link: "index.html" },
-    { name: "Anime", link: "#" },
+    { name: "Anime", link: "Anime.html" },
     { name: "Web Series", link: "#" },
     { name: "Movies", link: "#" },
     { name: "Games", link: "#" },
-    { name: "Earn Money", link: "#" },
-    { name: "Product Sell & Buy", link: "#" }
+    { name: "Earn Money", link: "Earn-Money.html" },
+    { name: "Product Sell & Buy", link: "#" },
+    { name: "Construction Work", link: "#" },
+    { name: "Free Internet File", link: "Free-Internet-File.html" }
 ],
 
     footer: {
@@ -267,3 +269,23 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+
+const themeToggle =
+document.getElementById("themeToggle");
+
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark");
+    themeToggle.checked = true;
+}
+
+themeToggle.addEventListener("change", function(){
+
+if(this.checked){  
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+}else{
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+}
+});
