@@ -241,3 +241,29 @@ function scaleWebsite() {
 
 window.addEventListener("resize", scaleWebsite);
 window.addEventListener("load", scaleWebsite);
+/* =====================================
+   SCROLL REVEAL EFFECT
+===================================== */
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(section => {
+
+        const sectionTop = section.getBoundingClientRect().top;
+        const revealPoint = 100; // jitna jaldi show karna hai
+
+        if (sectionTop < windowHeight - revealPoint) {
+            section.classList.add("active");
+        } else {
+            section.classList.remove("active");
+        }
+
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);

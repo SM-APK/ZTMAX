@@ -279,14 +279,40 @@ font-size: 30px;
     border-radius: 20px;
 }
 
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================ */
 
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
 /* FOOTER */
 .footer-1057{
     background:#111;
     color:#fff;
     padding:40px;
-}
 
+}
+.help-section-1059 p, .copyright-1064 p{
+    font-size: 20px;
+}
 .footer-links-1061{
     margin-top:15px;
 }
