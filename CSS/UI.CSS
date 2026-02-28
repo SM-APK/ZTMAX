@@ -497,17 +497,73 @@ right: 960px;
 
 
 .about-section{
-    background-color: var(--background-color-22);
+    background-color: var(--background-color);
+
+        box-shadow: 0 10px 20px rgb(51, 49, 49);
     width: 1800px;
-    height: 1400px;
+    height: 1500px;
     border-radius: 20px;
     padding: 50px 50px;
+}
+.owner-text{
+    position: absolute;
+    left: 840px;
+    font-size: 40px;
+}
+
+.about-name{
+    position: absolute;
+    left: 135px;
+    font-size: 40px;
+}
+.tick-about{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 400px;
+    top: 104px;
+}
+.about-all{
+    position: absolute;
+    
+    font-size: 40px;
+    
+}
+.about-1{
+top: 450px;
+left: 600px;
+}
+.about-2{
+top: 450px;
+left: 900px;
+}
+.about-3{
+top: 450px;
+left: 1300px;
+}
+.about-a{
+top: 390px;
+left: 640px;
+}
+.about-b{
+top: 390px;
+left: 925px;
+}
+.about-c{
+top: 390px;
+left: 1381px;
 }
 .about-section-text{
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
-    color: white;
+    color: var(--color);
+}
+.about-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0px 14px 25px rgb(51, 49, 49);
 }
 .contact-section{
     background: var(--background-color);
