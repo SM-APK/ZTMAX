@@ -510,18 +510,23 @@ right: 960px;
     left: 840px;
     font-size: 40px;
 }
-
-.about-name{
+.about-top{
+    width: 500px;
+    height: 60px;
     position: absolute;
-    left: 135px;
+    left: 125px;
+    display: flex;
+    padding: 1px 10px;
+    gap: 10px;
+}
+.about-name{
+
     font-size: 40px;
 }
 .tick-about{
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    left: 400px;
-    top: 104px;
+    width: 45px;
+    height: 45px;
+
 }
 .about-all{
     position: absolute;
