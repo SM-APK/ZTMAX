@@ -49,7 +49,126 @@ html, body{
     margin: 0;
     padding: 0;
 }
+.sign-up{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-color: var(--background-color);
+    box-shadow: 0 10px 20px rgb(51, 49, 49);
+    border-radius: 50px;
+    left: 700px;
+    padding: 100px 70px;
+}.sign-up-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    width: 370px;
+    height: 50px;
+    border: none;
+    border-bottom: 3px solid var(--color);
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: var(--color);
+    padding: 5px 0;
+    transition: 0.4s ease;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 18px;
+    color: var(--color);
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+/* Floating Animation */
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -18px;
+    font-size: 14px;
+    color: #00f0ff;
+    letter-spacing: 1px;
+}
+
+/* Animated Bottom Line */
+.input-group input:focus {
+    border-bottom: 3px solid #00f0ff;
+}
+
+/* SIGN UP Button */
+.sign-up-button {
+    width: 370px;
+    margin-top: 30px;
+    height: 55px;
+    border-radius: 30px;
+    border: 3px solid var(--color);
+    background: transparent;
+    color: var(--color);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    padding: 12px;
+}
+
+.sign-up-button:hover {
+    background: #00f0ff;
+    color: #000;
+    border-color: #00f0ff;
+    transform: translateY(-3px);
+}
+
+.sign-up-button:active {
+    transform: scale(0.96);
+}
+/* FORM CONTAINER ANIMATION */
+.form-container {
+    position: absolute;
+    width: 500px;
+    transition: 0.6s ease;
+    opacity: 0;
+    transform: translateX(50px);
+    pointer-events: none;
+}
+
+.form-container.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+/* Switch Text */
+.switch-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--color);
+}
+
+.switch-text span {
+    color: #00f0ff;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.switch-text span:hover {
+    text-decoration: underline;
+}
 /* ========== HEADER ========== */
 .header-1007{
     top: 0;
@@ -370,13 +489,13 @@ font-size: 30px;
 }
 .dashboard{
     width: 1920px;
-    height: 800px;
+    height: 1300px;
     background-color: var(--background-color);
     padding: 40px 40px;
     border-radius: 40px;
     box-shadow: 0 10px 20px rgb(51, 49, 49);
     display: flex;
-    gap: 80px;
+    gap: 50px;
 }
 .dashboard-look{
     width: 550px;
@@ -386,20 +505,52 @@ font-size: 30px;
     padding: 15px 20px;
     color: white;
 }
-.dash-board-section-5{
+.dash-board-section-4{
     position: absolute;
     left: 100px;
-    top: 700px;
+    top: 400px;
+}
+.dash-board-section-5{
+    position: absolute;
+    left: 725px;
+    top: 400px;
 }
 .dash-board-section-6{
     position: absolute;
-    left: 725px;
-    top: 700px;
+    left: 1350px;
+    top: 400px;
 }
 .dash-board-section-7{
+    border-radius: 50px;
     position: absolute;
-    left: 1350px;
-    top: 700px;
+    left: 350px;
+    top: 750px;
+    width: 1400px;
+    height: 500px;
+}
+.username{
+    color: #0099ff;
+}   
+.userprofile{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border:2px solid white;
+    position: absolute;
+    left: 350px;
+    top: 20px;
+}
+.current-amount{
+    color: green;
+    letter-spacing: 1px;
+}
+.total-withdraw{
+    color: red;
+    letter-spacing: 1px;
+}
+.total-earn{
+    color: rgb(255, 94, 0);
+    letter-spacing: 1px;
 }
 .settings{
     background-color: var(--background-color);
@@ -410,6 +561,12 @@ font-size: 30px;
 padding: 100px 100px;
 display: flex;
 gap: 50px;
+}
+.dashboard-heading-7{
+    position: absolute;
+    left: 600px;
+    font-size: 40px;
+    letter-spacing: 3px;
 }
 .setting-section{
     background-color: var(--background-color-22);
