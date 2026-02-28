@@ -11,7 +11,7 @@ const siteConfig = {
         { name: "CONTACT", link: "CONTACT.html" },
         { name: "ABOUT US", link: "ABOUT-US.html" },
         { name: "PRIVACY POLICY", link: "PRIVACY-POLICY.html" },
-        { name: "T & C", link: "T&C.html" }
+        { name: "T & C", link: "T-C.html" }
     ],
 
     rightMenu: [
@@ -28,7 +28,7 @@ tabs: [
     { name: "Games", link: "#" },
     { name: "Earn Money", link: "Earn-Money.html" },
     { name: "Product Sell & Buy", link: "#" },
-    { name: "Construction Work", link: "https://khatushyamconstruction.github.io/home/" },
+    { name: "Construction Work", link: "#" },
     { name: "Free Internet File", link: "Free-Internet-File.html" }
 ],
 
@@ -288,5 +288,4 @@ if(this.checked){
     document.body.classList.remove("dark");
     localStorage.setItem("theme", "light");
 }
-
 });
