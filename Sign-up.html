@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ZTMAX | Sign UP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/UI.CSS">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2160835938058792"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="site-wrapper" id="site-wrapper">
+<header id="header-1007" class="header-1007">
+
+    <!-- Logo -->
+    <div id="top-banner-1008" class="top-banner-1008">
+        <div id="logo-container-1010" class="logo-container-1010"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="main-navigation-1012" class="main-navigation-1012">
+        <nav id="left-menu-1013" class="left-menu-1013"></nav>
+        <div id="right-menu-button-1027" class="right-menu-button-1027"></div>
+    </div>
+
+
+</header>
+    <!-- Tabs -->
+    <div id="tabs-section-1041" class="tabs-section-1041"></div>
+
+
+<main id="main-content-1054" class="main-content-1054">
+<section id="content-section-1055" class="content-section-1055">
+    <br><br><br><br><br>
+    <h2 id="heading-5678" class="heading-5678">SIGN UP</h2>
+    <br><br>
+<div class="sign-up">
+
+    <!-- SIGN UP FORM -->
+    <div class="form-container active" id="signupForm">
+        <h2 class="sign-up-text">SIGN UP</h2>
+
+        <form class="sign-up-form">
+
+            <div class="input-group">
+                <input type="text" required>
+                <label>NAME</label>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" required>
+                <label>NUMBER</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>EMAIL</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" required>
+                <label>PASSWORD</label>
+            </div>
+
+            <button type="submit" class="sign-up-button">SIGN UP
+<br><br>
+            <p class="switch-text">
+                Already have an account?
+                <span id="showLogin">LOGIN</span>
+            </p>
+</button>
+        </form>
+    </div>
+
+
+    <!-- LOGIN FORM -->
+    <div class="form-container" id="loginForm">
+        <h2 class="sign-up-text">LOGIN</h2>
+
+        <form class="sign-up-form">
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>EMAIL</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" required>
+                <label>PASSWORD</label>
+            </div>
+
+            <button type="submit" class="sign-up-button">LOGIN
+<br><br>
+            <p class="switch-text">
+                Don’t have an account?
+                <span id="showSignup">SIGN UP</span>
+            </p>
+</button>
+        </form>
+    </div>
+
+</div></section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</main>
+<footer id="footer-1057" class="footer-1057"></footer>
+</div>
+<script>
+const signupForm = document.getElementById("signupForm");
+const loginForm = document.getElementById("loginForm");
+
+const showLogin = document.getElementById("showLogin");
+const showSignup = document.getElementById("showSignup");
+
+showLogin.addEventListener("click", () => {
+    signupForm.classList.remove("active");
+    setTimeout(() => {
+        loginForm.classList.add("active");
+    }, 200);
+});
+
+showSignup.addEventListener("click", () => {
+    loginForm.classList.remove("active");
+    setTimeout(() => {
+        signupForm.classList.add("active");
+    }, 200);
+});
+</script>
+<script src="JS/BASIC.JS"></script>
+
+</body>
+</html>
