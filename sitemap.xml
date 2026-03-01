@@ -52,4 +52,8 @@
     <priority>0.40</priority>
   </url>
 
+  <url>
+    <loc>https://http://ztmax.in/Sign-up.html</loc>
+    <priority>0.90</priority>
+  </url>
 </urlset>
