@@ -106,10 +106,7 @@ siteConfig.tabs.forEach(tab => {
         </li>
     `;
 });
-
-tabsHTML += `</ul>`;
-
-document.getElementById("tabs-section-1041").innerHTML = tabsHTML;    tabsHTML += `</ul>`;
+ tabsHTML += `</ul>`;
 
     document.getElementById("tabs-section-1041").innerHTML = tabsHTML;
 

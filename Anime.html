@@ -33,42 +33,210 @@
 <main id="main-content-1054" class="main-content-1054">
 <section id="content-section-1055" class="content-section-1055">
 <div class="search-container-searching-673890">
-        <input type="text" id="search-input-searching-673890" class="search-input-searching-673890" placeholder="Search Your Fav Anime...">
-        <button id="clear-btn-searching-673890" class="clear-btn-searching-673890" style="display:none;">✖</button>
-        <button id="search-btn-searching-673890" class="search-btn-searching-673890">Search</button>
-    </div>
+    <input type="text"
+           id="search-input-searching-673890"
+           class="search-input-searching-673890"
+           placeholder="Search Your Fav Anime...">
+</div>
     <h2 id="heading-5678" class="heading-5678">Anime</h2>
     <br><br>
-<div class="anime-section reveal">
+    
+<div class="anime-section reveal" id="anime-container">
+    
+    <div class="anime-look">
+    <div class="anime-img">
+        <img src="ANIME/your-name.jpg" alt="your-name">
+    </div>
+<br>
+    <div class="anime-name-look">
+        YOUR NAME
+    </div>
+<br>
+    <div class="anime-description">
+        Your Name (Kimi no Na wa) is a romantic fantasy anime film about two strangers who mysteriously swap bodies and form a deep connection while trying to change their fate.
+    </div>
+<br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
+</div>
+
+
 <div class="anime-look">
-<div class="anime-img">
-    <img src="IMAGE/ANIME.png" alt="anime-name" >
-</div>    <br>
-<div class="anime-name-look">
-anime name
-</div><br>
-<div class="anime-description">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti consectetur voluptatem aliquid voluptates odio ipsum perspiciatis quasi quibusdam saepe ex unde nulla sint minus, corrupti corporis necessitatibus eligendi! Quisquam!
-</div><br>
-<div class="anime-see">
-<button><a href="#">Watch Anime</a></button>
+    <div class="anime-img">
+        <img src="ANIME/suzume.jpg" alt="suzume">
+    </div>
+<br>
+    <div class="anime-name-look">
+        SUZUME
+    </div>
+<br>
+    <div class="anime-description">
+        Suzume is a fantasy adventure anime about a teenage girl who teams up with a mysterious young man to close magical doors across Japan and prevent devastating disasters.
+    </div>
+<br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
 </div>
+
+
+<div class="anime-look">
+    <div class="anime-img">
+        <img src="ANIME/weathering-with-you.jpg" alt="weathering-with-you">
+    </div>
+<br>
+    <div class="anime-name-look">
+        WEATHERING WITH YOU
+    </div>
+<br>
+    <div class="anime-description">
+       Weathering with You is a romantic fantasy anime about a runaway boy who meets a girl with the power to control the weather, and together they change each other’s lives amid a rain-soaked Tokyo.
+    </div>
+       <br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
+</div>
+
+
+
+<div class="anime-look">
+    <div class="anime-img">
+        <img src="ANIME/a-silent-voice.jpg" alt="a-silent-voice">
+    </div>
+<br>
+    <div class="anime-name-look">
+        A SILENT VOICE
+    </div>
+<br>
+    <div class="anime-description">
+        A Silent Voice is a heartfelt anime drama about a former bully seeking redemption by reconnecting with the deaf girl he once hurt and learning the true meaning of forgiveness and friendship.
+</div>
+        <br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
+</div>
+
+
+<div class="anime-look">
+    <div class="anime-img">
+        <img src="ANIME/your-lie-in-april.jpg" alt="your-lie-in-april">
+    </div>
+<br>
+    <div class="anime-name-look">
+        YOUR LIE IN APRIL
+    </div>
+<br>
+    <div class="anime-description">
+Your Lie in April is an emotional music romance anime about a piano prodigy who rediscovers his love for music after meeting a free-spirited violinist who changes his life forever.
+</div>
+        <br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
+</div>
+
+
+
+<div class="anime-look">
+    <div class="anime-img">
+        <img src="ANIME/one-piece.jpg" alt="one-piece">
+    </div>
+<br>
+    <div class="anime-name-look">
+        ONE PIECE
+    </div>
+<br>
+    <div class="anime-description">
+One Piece is an epic adventure anime about Monkey D. Luffy and his pirate crew searching for the legendary treasure “One Piece” to become the King of the Pirates.
+</div>
+        <br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
+</div>
+
+
+<div class="anime-look">
+    <div class="anime-img">
+        <img src="ANIME/naruto.jpg" alt="naruto">
+    </div>
+<br>
+    <div class="anime-name-look">
+        NARUTO
+    </div>
+<br>
+    <div class="anime-description">
+Naruto is an action-packed ninja anime about Naruto Uzumaki, a young outcast striving to become the strongest ninja and earn recognition as his village’s Hokage.
+</div>
+        <br>
+    <div class="anime-see">
+        <button><a href="#">Watch Anime</a></button>
+    </div>
 </div>
 
 
 
 
 
+
+
+
+
+
+
+
+<p id="not-found-message"
+   style="display:none; font-size:28px; color:red; text-align:center; margin-top:30px;">
+   Anime Not Found ❌
+</p>
 </div>  
-
-
-
 </section>
 </main>
 
 <footer id="footer-1057" class="footer-1057"></footer>
 </div>
+<script>/* ===============================
+   LIVE ANIME SEARCH
+================================= */
 
+const searchInput = document.getElementById("search-input-searching-673890");
+const notFoundMessage = document.getElementById("not-found-message");
+
+if (searchInput) {
+
+    searchInput.addEventListener("input", function () {
+
+        const searchValue = searchInput.value.toLowerCase().trim();
+        const animeCards = document.querySelectorAll(".anime-look");
+
+        let found = false;
+
+        animeCards.forEach(card => {
+
+            const name = card.querySelector(".anime-name-look").innerText.toLowerCase();
+            const description = card.querySelector(".anime-description").innerText.toLowerCase();
+
+            if (name.includes(searchValue) || description.includes(searchValue)) {
+                card.style.display = "block";
+                found = true;
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+        if (!found && searchValue !== "") {
+            notFoundMessage.style.display = "block";
+        } else {
+            notFoundMessage.style.display = "none";
+        }
+
+    });
+
+}</script>
 <script src="JS/BASIC.JS"></script>
 
 </body>

@@ -646,7 +646,7 @@ right: 960px;
         border-radius: 50%;
     }
     input:checked + .slider {
-        background-color: #69f546;
+        background-color: #2eb90b;
     }
     input:checked + .slider:before {
         transform: translateX(36px);
@@ -873,38 +873,18 @@ left: 1381px;
     66% { border-color: #fffc00; }
     100% { border-color: #ff00c8; }
 }
-
-.clear-btn-searching-673890,
-.search-btn-searching-673890 {
-    border: none;
-    padding: 14px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-    color: #fff;
-    background: linear-gradient(45deg, #ff00c8, #00ffe1, #fffc00);
-    background-size: 300% 300%;
-    animation: btn-rgb 4s linear infinite;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
-
-
-@keyframes btn-rgb {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 .anime-section{
     background-color: var(--background-color);
-        box-shadow: 0 10px 20px rgb(51, 49, 49);
+    box-shadow: 0 10px 20px rgb(51, 49, 49);
     width: 1900px;
-    height: 10000px;
-    padding: 50px 50px;
+    height: auto;
+    padding: 50px;
     border-radius: 20px;
-    gap: 75px;
-    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+    gap: 30px; /* row + column gap */
+    justify-items: center;
 }
 .anime-look{
     background-color: var(--background-color-22);
@@ -921,24 +901,26 @@ left: 1381px;
     border-radius: 20px;
 }
 .anime-name-look{
-    color: white;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: 1px;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .anime-description{
     color: white;
-
-    font-family:Arial, Helvetica, sans-serif;
+font-size: 17px;
     
 }
 .anime-see button{
+
     width: 340px;
     height: 70px;
     padding: 10px 10px;
     border-radius: 20px;
     font-size: 30px;
     font-weight: bold;
-    border: 5px solid black;
+    border: 2px solid black;
     background: linear-gradient(35deg, #00eeff, rgb(0, 255, 13));
     color: white;
 transform: all 5.3s ease;
