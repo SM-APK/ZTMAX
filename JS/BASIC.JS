@@ -23,9 +23,6 @@ const siteConfig = {
 tabs: [
     { name: "Home", link: "index.html" },
     { name: "Anime", link: "Anime.html" },
-    { name: "Web Series", link: "#" },
-    { name: "Movies", link: "#" },
-    { name: "Games", link: "#" },
     { name: "Earn Money", link: "Earn-Money.html" },
     { name: "Product Sell & Buy", link: "#" },
     { name: "Construction Work", link: "khatushyamconstruction.github.io/home/" },
@@ -180,16 +177,13 @@ siteConfig.tabs.forEach(tab => {
     });
 
 });
-/* =========================================
-   PROTECTED DOWNLOAD + SMARTLINK SYSTEM
-========================================= */
+
 
 const smartLink = "https://www.effectivegatecpm.com/pdzjbznj3?key=62c907db4bcf721700b0a511c8bea1c4";
 
-// Protected mapping: anime => real download link
 const animeDownloads = {
     "YOUR NAME": "https://download1640.mediafire.com/l5cdnzgw7vqgOLhgRtODHeW_AoHmElt2X6zpuMRVSI16fTrwWiX8Yq3EzWDnvLcKrP0FO2FpJtCousxK9ANlhAAIv1Kg7M9iRYy5Um8d2r1uUR-Ggsy7Jen-b6VjnKyrB9FNLKQ9xshJjroYB_OmoDzm0y0C3SjgmyN5wTUmFXUo/ifclocxbrost9ju/your+name.+%28Hindi+Dub%29+%5B480p%5D.mkv"
-    // add more anime names here with keys, later
+  
 };
 
 document.querySelectorAll(".anime-look").forEach(card => {
@@ -199,17 +193,17 @@ document.querySelectorAll(".anime-look").forEach(card => {
     
     btn.addEventListener("click", function () {
 
-        // Find download link from mapping
+        
         const downloadLink = animeDownloads[animeName];
         if (!downloadLink) {
             alert("Download link not found");
             return;
         }
 
-        // Open Smartlink ad
-        window.open(smartLink, "_blank");
+        
+        window.open(smartLink);
 
-        // Disable button + timer
+        
         btn.innerText = "Please Wait 30s...";
         btn.disabled = true;
 
@@ -221,7 +215,7 @@ document.querySelectorAll(".anime-look").forEach(card => {
             if (timeLeft <= 0) {
                 clearInterval(interval);
                 
-                // Redirect to download
+            
                 window.location.href = downloadLink;
             }
         }, 1000);
