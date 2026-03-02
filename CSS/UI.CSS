@@ -664,7 +664,7 @@ right: 960px;
 }
 .owner-text{
     position: absolute;
-    left: 840px;
+    left: 890px;
     font-size: 40px;
 }
 .about-top{
@@ -684,36 +684,6 @@ right: 960px;
     width: 45px;
     height: 45px;
 
-}
-.about-all{
-    position: absolute;
-    
-    font-size: 40px;
-    
-}
-.about-1{
-top: 450px;
-left: 600px;
-}
-.about-2{
-top: 450px;
-left: 900px;
-}
-.about-3{
-top: 450px;
-left: 1300px;
-}
-.about-a{
-top: 390px;
-left: 640px;
-}
-.about-b{
-top: 390px;
-left: 925px;
-}
-.about-c{
-top: 390px;
-left: 1381px;
 }
 .about-section-text{
     font-size: 40px;
