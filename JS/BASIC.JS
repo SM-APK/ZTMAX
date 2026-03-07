@@ -26,7 +26,6 @@ tabs: [
     { name: "Earn Money", link: "Earn-Money.html" },
     { name: "Product Sell & Buy", link: "#" },
     { name: "Construction Work", link: "khatushyamconstruction.github.io/home/" },
-    { name: "Free Internet File", link: "Free-Internet-File.html" }
 ],
 
     footer: {
