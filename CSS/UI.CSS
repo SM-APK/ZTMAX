@@ -50,13 +50,13 @@ html, body{
     padding: 0;
 }
 .sign-up{
-    position: absolute;
+
     width: 500px;
     height: 800px;
     background-color: var(--background-color);
     box-shadow: 0 10px 20px rgb(51, 49, 49);
     border-radius: 50px;
-    left: 700px;
+
     padding: 100px 70px;
 }.sign-up-form {
     margin-top: 40px;
@@ -431,7 +431,7 @@ html, body{
     letter-spacing: 2px;
 font-size: 30px;
 }
-.home-section-img   img{
+.home-section-img   img, .home-section-img-c{
     border-radius: 20px;
 }
 
@@ -461,6 +461,10 @@ font-size: 30px;
 }
 /* FOOTER */
 .footer-1057{
+    width: 2000px;
+    position: absolute;
+    left: 0px;
+
     background:#111;
     color:#fff;
     padding:40px;
@@ -572,27 +576,12 @@ gap: 50px;
     background-color: var(--background-color-22);
     color: white;
     width: 850px;
-    height: 800px;
+    height: auto;
     border-radius: 20px;
     padding: 50px 50px;
     
 }
-.setting-section-a{
-    content:'';
-    width:4px;
-    height:700px;
-    background:#00f0ff;
-    position:fixed;
-left: 165px;
-}
-.setting-section-b{
-    content:'';
-    width:4px;
-    height:700px;
-    background:#00f0ff;
-    position:fixed;
-right: 960px;
-}
+
 .setting-option{
     color: white;
     font-size: 30px;
@@ -666,7 +655,7 @@ right: 960px;
     position: absolute;
     left: 890px;
     font-size: 40px;
-}
+} 
 .about-top{
     width: 500px;
     height: 60px;
@@ -724,7 +713,7 @@ right: 960px;
     border: 2px solid #444;
     border-radius: 8px;
     outline: none;
-    color: #fff;
+    color: var(--color);
     font-size: 16px;
     transition: 0.3s ease;
 }
@@ -789,13 +778,13 @@ right: 960px;
 }
 .privacy-policy-T-C{
     align-items: center;
-    position: fixed;
+
     background-color: var(--background-color-22);
     width: 1000px;
-    height: 2000px;
+    height: auto;
     border-radius: 20px;
     padding: 50px 50px;
-    left: 500px;
+
 }
 .text-privacy-T-C{
     font-size: 20px;
@@ -898,48 +887,4 @@ transform: all 5.3s ease;
 .anime-see button a{
     text-decoration: none;
     color: white;
-}
-.free-file{
-    background-color: var(--background-color-22);
-        box-shadow: 0 10px 20px rgb(51, 49, 49);
-    width: 900px;
-    height: 500px;
-    padding: 50px 50px;
-    border-radius: 70px;
-
-}
-.date{
-    color: white;
-    font-size: 30px;
-}
-.file-link {
-    text-decoration: none;
-    color: skyblue;
-    
-}
-.file-name h2, .file-name h1{
-    color: white;
-}
-.earn-money{
-    background-color: var(--background-color);
-            box-shadow: 0 10px 20px rgb(51, 49, 49);
-    width: 1900px;
-    height: 1000px;
-    padding: 50px 50px;
-    border-radius: 40px;
-    display: flex;
-    gap: 80px;
-}
-.earn-section{
-    align-items: center;
-    justify-content: center;
-    background-color: var(--background-color-22);
-    color: white;
-    width: 400px;
-    height: 800px;
-    border-radius: 50px;
-    padding: 20px 20px;
-}
-.text-earn-a{
-    left: 200px;
 }
