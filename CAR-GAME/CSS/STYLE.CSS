@@ -1,1 +1,225 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
 
+body{
+
+background:#111;
+color:white;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+
+}
+
+#gameWrapper{
+
+width:380px;
+max-width:95%;
+
+}
+
+#topUI{
+
+background:#1a1a1a;
+
+border:1px solid #333;
+
+padding:10px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:10px;
+
+}
+
+.infoBox{
+
+flex:1;
+text-align:center;
+
+}
+
+.title{
+
+font-size:11px;
+color:#777;
+
+}
+
+.value{
+
+font-size:18px;
+font-weight:bold;
+
+}
+
+.speedBar{
+
+width:100%;
+height:5px;
+
+background:#222;
+
+margin-top:4px;
+
+}
+
+#speedFill{
+
+height:100%;
+
+width:0%;
+
+background:white;
+
+transition:width .2s;
+
+}
+
+#pauseBtn{
+
+background:#222;
+
+border:1px solid #444;
+
+color:white;
+
+padding:6px 12px;
+
+cursor:pointer;
+
+}
+
+canvas{
+
+width:100%;
+
+background:#333;
+
+border:2px solid #444;
+
+display:block;
+
+}
+
+#controls{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:12px;
+padding:10px;
+background:#1a1a1a;
+border:1px solid #333;
+border-radius:10px;
+}
+#controls button {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+#controls button{
+
+width:60px;
+height:60px;
+
+font-size:20px;
+
+background:#222;
+
+border:1px solid #444;
+
+color:white;
+
+}
+.horizontal{
+display:flex;
+gap:10px;
+}
+
+#controls button{
+width:65px;
+height:65px;
+font-size:22px;
+background:linear-gradient(145deg,#222,#111);
+border:1px solid #555;
+color:white;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.5);
+transition:0.2s;
+}
+
+#controls button:active{
+transform:scale(0.9);
+background:#000;
+}
+.vertical{
+
+display:flex;
+flex-direction:column;
+gap:8px;
+
+}
+
+#gameOver{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,0.6);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+}
+
+.popup{
+
+background:#111;
+
+border:1px solid #444;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+.popup h1{
+
+margin-bottom:10px;
+
+}
+
+.popup h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.popup button{
+
+background:#222;
+
+border:1px solid #444;
+
+color:white;
+
+padding:10px 20px;
+
+cursor:pointer;
+
+}
