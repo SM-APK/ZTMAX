@@ -24,8 +24,10 @@ tabs: [
     { name: "Home", link: "index.html" },
     { name: "Anime", link: "Anime.html" },
     { name: "Earn Money", link: "Earn-Money.html" },
-    { name: "Product Sell & Buy", link: "#" },
+    { name: "Product Sell & Buy", link: "Product-sell-buy.html" },
     { name: "Construction Work", link: "khatushyamconstruction.github.io/home/" },
+    { name: "Car Game", link: "CAR-GAME/INDEX.HTML" },
+
 ],
 
     footer: {
@@ -228,7 +230,7 @@ document.querySelectorAll(".anime-look").forEach(card => {
 
 let lastScrollY = window.scrollY;
 let ticking = false;
-
+    
 const header = document.getElementById("header-1007");
 const tabs = document.getElementById("tabs-section-1041");
 
@@ -238,7 +240,7 @@ const tabsHeight = tabs.offsetHeight;
 
 window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
-
+ 
     if (!ticking) {
         window.requestAnimationFrame(() => {
 
