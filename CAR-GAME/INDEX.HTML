@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Racing Game</title>
+
+<link rel="stylesheet" href="CSS/STYLE.CSS">
+
+</head>
+
+<body>
+
+<div id="gameWrapper">
+
+<header id="topUI">
+
+<div class="infoBox">
+<div class="title">SPEED</div>
+<div class="value">
+<span id="speed">0</span> km/h
+</div>
+
+<div class="speedBar">
+<div id="speedFill"></div>
+</div>
+
+</div>
+
+<div class="infoBox">
+<div class="title">TIME</div>
+<div id="time" class="value">0</div>
+</div>
+
+<div class="infoBox">
+<div class="title">BEST</div>
+<div id="highScore" class="value">0</div>
+</div>
+<div class="infoBox">
+    <div class="title">COINS</div>
+    <div id="coinCount" class="value">0</div>
+</div>
+<button id="pauseBtn">PAUSE</button>
+
+</header>
+
+
+<canvas id="gameCanvas" width="360" height="600"></canvas>
+
+<div id="controls">
+
+<!-- LEFT SIDE: UP DOWN -->
+<div class="vertical">
+<button id="up">▲</button>
+<button id="down">▼</button>
+</div>
+
+<!-- RIGHT SIDE: LEFT RIGHT -->
+<div class="horizontal">
+<button id="left">◀</button>
+<button id="right">▶</button>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id="gameOver">
+
+<div class="popup">
+
+<h1>GAME OVER</h1>
+
+<p>Your Time</p>
+
+<h2 id="finalTime">0</h2>
+
+<button onclick="restartGame()">RESTART</button>
+
+</div>
+
+</div>
+
+<script src="JS/SCRIPT.JS"></script>
+
+
+</body>
+</html>
