@@ -1,6 +1,4 @@
-/* =================================================
-   WEBSITE CONFIG
-================================================= */
+
 
 const siteConfig = {
 
@@ -25,7 +23,7 @@ tabs: [
     { name: "Anime", link: "Anime.html" },
     { name: "Earn Money", link: "Earn-Money.html" },
     { name: "Product Sell & Buy", link: "Product-sell-buy.html" },
-    { name: "Construction Work", link: "khatushyamconstruction.github.io/home/" },
+    { name: "Construction Work", link: "Construction.html" },
     { name: "Car Game", link: "CAR-GAME/INDEX.HTML" },
 
 ],
@@ -37,23 +35,15 @@ tabs: [
 };
 
 
-/* =================================================
-   LOAD EVERYTHING AFTER DOM READY
-================================================= */
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================
-       LOAD LOGO
-    ========================= */
+
 
     document.getElementById("logo-container-1010").innerHTML =
         `<img class="logo-1011" src="${siteConfig.logo}" alt="Logo">`;
 
-
-    /* =========================
-       LOAD LEFT MENU
-    ========================= */
 
     let leftMenuHTML = `<ul class="menu-list-1014">`;
 
@@ -68,9 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("left-menu-1013").innerHTML = leftMenuHTML;
 
 
-    /* =========================
-       LOAD RIGHT MENU
-    ========================= */
 
     let rightMenuHTML = `
     <button id="menu-btn-1028" class="menu-btn-1028">MENU</button>
@@ -89,9 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("right-menu-button-1027").innerHTML = rightMenuHTML;
 
 
-    /* =========================
-       LOAD TABS
-    ========================= */
 
 let tabsHTML = `<ul class="tabs-list-1042">`;
 
@@ -109,9 +93,6 @@ siteConfig.tabs.forEach(tab => {
     document.getElementById("tabs-section-1041").innerHTML = tabsHTML;
 
 
-    /* =========================
-       LOAD FOOTER
-    ========================= */
 
     document.getElementById("footer-1057").innerHTML = `
     <div class="footer-content-1058">
@@ -131,12 +112,8 @@ siteConfig.tabs.forEach(tab => {
     `;
 
 
-    /* =================================================
-       EVENTS SECTION
-    ================================================= */
 
 
-    /* ===== Dropdown Toggle ===== */
 
     const menuBtn = document.getElementById("menu-btn-1028");
     const dropdown = document.getElementById("dropdown-content-1029");
@@ -154,7 +131,7 @@ siteConfig.tabs.forEach(tab => {
     });
 
 
-    /* ===== Tabs Click Toggle ===== */
+
 
     document.querySelectorAll(".tab-parent").forEach(tab => {
 
@@ -224,9 +201,6 @@ document.querySelectorAll(".anime-look").forEach(card => {
     });
 
 });
-/* =================================================
-   SCROLL HIDE / SHOW HEADER + TABS (Smooth + Responsive)
-================================================= */
 
 let lastScrollY = window.scrollY;
 let ticking = false;
@@ -234,7 +208,6 @@ let ticking = false;
 const header = document.getElementById("header-1007");
 const tabs = document.getElementById("tabs-section-1041");
 
-// Dynamically get heights
 const headerHeight = header.offsetHeight;
 const tabsHeight = tabs.offsetHeight;
 
@@ -244,12 +217,10 @@ window.addEventListener("scroll", () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
 
-            // SCROLL DOWN → hide header + tabs (only if user scrolled more than 50px)
             if (currentScrollY > lastScrollY + 5 && currentScrollY > 50) {
                 header.style.transform = `translateY(-${headerHeight}px)`;
                 tabs.style.transform = `translateY(-${tabsHeight}px)`;
             } 
-            // SCROLL UP → show header + tabs (even small scroll up)
             else if (currentScrollY < lastScrollY - 5) {
                 header.style.transform = "translateY(0)";
                 tabs.style.transform = "translateY(0)";
@@ -262,15 +233,12 @@ window.addEventListener("scroll", () => {
         ticking = true;
     }
 });
-/* =================================================
-   AUTO SCALE 2000px WEBSITE FOR ALL DEVICES
-================================================= */
 
 function scaleWebsite() {
 
     const wrapper = document.getElementById("site-wrapper");
 
-    const baseWidth = 2000;  // Your design width
+    const baseWidth = 2000;  
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
@@ -278,15 +246,13 @@ function scaleWebsite() {
 
     wrapper.style.transform = `scale(${scale})`;
 
-    // Adjust height so no cut issue
+
     wrapper.style.height = (screenHeight / scale) + "px";
 }
 
 window.addEventListener("resize", scaleWebsite);
 window.addEventListener("load", scaleWebsite);
-/* =====================================
-   SCROLL REVEAL EFFECT
-===================================== */
+
 
 const reveals = document.querySelectorAll(".reveal");
 
@@ -297,7 +263,7 @@ function revealOnScroll() {
     reveals.forEach(section => {
 
         const sectionTop = section.getBoundingClientRect().top;
-        const revealPoint = 100; // jitna jaldi show karna hai
+        const revealPoint = 100;
 
         if (sectionTop < windowHeight - revealPoint) {
             section.classList.add("active");

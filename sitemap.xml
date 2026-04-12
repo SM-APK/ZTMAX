@@ -18,6 +18,11 @@
   </url>
 
   <url>
+    <loc>https://ztmax.in/Construction.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
     <loc>https://ztmax.in/CONTACT.html</loc>
     <priority>0.70</priority>
   </url>
@@ -28,23 +33,27 @@
   </url>
 
   <url>
+    <loc>https://ztmax.in/Earn-Money.html</loc>
+    <priority>0.85</priority>
+
+  <url>
+    <loc>https://ztmax.in/PRIVACY-POLICY.html</loc>
+    <priority>0.40</priority>
+  </url>
+
+    <url>
+    <loc>https://ztmax.in/Product-sell-buy.html</loc>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
     <loc>https://ztmax.in/Settings.html</loc>
     <priority>0.50</priority>
   </url>
 
   <url>
-    <loc>https://ztmax.in/Earn-Money.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://ztmax.in/Free-Internet-File.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ztmax.in/PRIVACY-POLICY.html</loc>
-    <priority>0.40</priority>
+    <loc>https://ztmax.in/Sign-up.html</loc>
+    <priority>0.90</priority>
   </url>
 
   <url>
@@ -52,8 +61,5 @@
     <priority>0.40</priority>
   </url>
 
-  <url>
-    <loc>https://ztmax.in/Sign-up.html</loc>
-    <priority>0.90</priority>
-  </url>
+
 </urlset>
