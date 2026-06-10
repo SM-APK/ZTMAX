@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Level </title>
+    <link rel="stylesheet" href="css/all-level-format.css">
+    <style>
+        .game-area{
+  position:relative;
+  width:20000px;  
+  height:1100px;
+  overflow:hidden;
+  will-change: transform;
+}
+.platform, .platform-1{
+  position:absolute;
+  height:40px;
+  background:orange;
+  border-top:5px solid orange;
+}
+.platform-h{
+  height: 80px;
+}
+.ground{
+  width:1700px;
+  bottom:400px;
+  left:0;
+}
+
+.void{
+  background-color: black;
+  width: 100%;
+  height: 360px;
+}
+    </style>
+</head>
+<body>    <div class="game-wrapper">
+<header class="heading">
+    <h1 class="title">LEVEL 10</h1> <!--change level-->
+    <div id="menuToggle" class="menuBtn">
+        <div class="menuLines"></div>
+    </div>
+</header>
+
+
+<div class="menu-overlay" id="menuOverlay">
+    <div class="menu-box">
+        <h2 class="menu-heading">Game Menu</h2>
+        <button class="menu-item" id="back">Back Level List</button>
+        <button class="menu-item" id="restart">Restart</button>
+        <button class="menu-item" id="pause">Pause</button>
+    </div>
+</div>
+
+<!-- GAME OVER POPUP -->
+<div class="gameover-overlay" id="gameOverPopup">
+  <div class="gameover-box">
+    <h2>💀 GAME OVER</h2>
+    <button id="retryBtn">RETRY</button>
+  </div>
+</div>
+
+<!-- LEVEL COMPLETE POPUP -->
+<div class="levelCompletePopup" id="levelCompletePopup">
+    <div class="completeBox">
+        <h2> LEVEL COMPLETE</h2>
+        <button id="nextBtn">Next Level ➜</button>
+    </div>
+</div>
+<div class="control-101">
+<!-- 🔥 CONTROLS OUTSIDE GAME AREA -->
+<button class="control-bnt" id="jump">JUMP</button>
+<button class="control-bnt" id="down">DOWN</button>       
+<button class="control-bnt" id="right">RIGHT</button>
+<button class="control-bnt" id="left">LEFT</button>
+
+</div>
+    <div class="game-area">
+        <div class="sky"></div>
+        <div class="void"></div>
+<div class="player" id="player">
+  <div class="head"></div>
+
+  <div class="body">
+    <div class="arm left">
+      <div class="forearm"></div>
+    </div>
+
+    <div class="arm right">
+      <div class="forearm"></div>
+    </div>
+  </div>
+
+  <div class="leg left">
+    <div class="lower-leg"></div>
+  </div>
+
+  <div class="leg right">
+    <div class="lower-leg"></div>
+  </div>
+</div>
+
+        <div class="platform ground"></div>
+<div class="spike" data-id="31" style="left:110px; bottom:420px;"></div>
+<div class="spike" data-id="32" style="left:130px; bottom:420px;"></div>
+<div class="spike" data-id="33" style="left:150px; bottom:420px;"></div>
+
+<div class="spike" data-id="34" style="left:170px; bottom:420px;"></div>
+<div class="spike" data-id="35" style="left:190px; bottom:420px;"></div>
+<div class="spike" data-id="36" style="left:210px; bottom:420px;"></div>
+
+<div class="spike" data-id="37" style="left:230px; bottom:420px;"></div>
+<div class="spike" data-id="38" style="left:250px; bottom:420px;"></div>
+<div class="spike" data-id="39" style="left:270px; bottom:420px;"></div>
+
+<div class="spike" data-id="40" style="left:290px; bottom:420px;"></div>
+<div class="spike" data-id="41" style="left:310px; bottom:420px;"></div>
+<div class="spike" data-id="42" style="left:330px; bottom:420px;"></div>
+
+<div class="spike" data-id="43" style="left:350px; bottom:420px;"></div>
+<div class="spike" data-id="44" style="left:370px; bottom:420px;"></div>
+<div class="spike" data-id="45" style="left:390px; bottom:420px;"></div>
+
+<div class="spike" data-id="46" style="left:410px; bottom:420px;"></div>
+<div class="spike" data-id="47" style="left:430px; bottom:420px;"></div>
+<div class="spike" data-id="48" style="left:450px; bottom:420px;"></div>
+
+<div class="spike" data-id="49" style="left:1110px; bottom:420px;"></div>
+<div class="spike" data-id="49" style="left:1130px; bottom:420px;"></div>
+<div class="spike" data-id="49" style="left:1150px; bottom:420px;"></div>
+
+<div class="spike" data-id="50" style="left:1250px; bottom:420px;"></div>
+<div class="spike" data-id="50" style="left:1270px; bottom:420px;"></div>
+<div class="spike" data-id="50" style="left:1290px; bottom:420px;"></div>
+
+<div class="spike" data-id="51" style="left:1390px; bottom:420px;"></div>
+<div class="spike" data-id="51" style="left:1410px; bottom:420px;"></div>
+<div class="spike" data-id="51" style="left:1430px; bottom:420px;"></div>
+
+<div class="spike" data-id="52" style="left:1530px; bottom:440px;"></div>
+<div class="spike" data-id="53" style="left:1550px; bottom:440px;"></div>
+<div class="spike" data-id="54" style="left:1570px; bottom:440px;"></div>
+ <div class="platform-1 fake-platform" data-id="0" style="left:1700px; bottom:400px; width:120px;"></div>
+<div class="platform" data-id="0" style="left:1820px; bottom:480px; width:15000px;"></div>
+<div class="spike spike-h" data-id="55" style="left:-20px; bottom:540px;"></div>
+<div class="spike spike-h" data-id="56" style="left:-20px; bottom:540px;"></div>
+
+<div class="spike-1" style="left:2760px; bottom:520px;"></div>
+<div class="spike-1" style="left:2780px; bottom:520px;"></div>
+<div class="spike-1" style="left:2800px; bottom:520px;"></div>
+<div class="platform platform-h" data-id="0" style="left:2820px; bottom:520px; width:60px;"></div>
+<div class="spike-1" style="left:2820px; bottom:600px;"></div>
+<div class="spike-1" style="left:2840px; bottom:600px;"></div>
+<div class="spike-1" style="left:2860px; bottom:600px;"></div>
+<div class="platform platform-h" data-id="0" style="left:2880px; bottom:600px; width:60px;"></div>
+<div class="spike-1" style="left:2880px; bottom:680px;"></div>
+<div class="spike-1" style="left:2900px; bottom:680px;"></div>
+<div class="spike-1" style="left:2920px; bottom:680px;"></div>
+<div class="platform" data-id="0" style="left:2880px; bottom:640px; width:900px;"></div>
+<div class="spike-1" data-id="0" style="left:3050px; bottom:680px;"></div>
+<div class="spike-1" data-id="0" style="left:3070px; bottom:680px;"></div>
+<div class="spike-1" data-id="0" style="left:3090px; bottom:680px;"></div>
+
+
+<div class="spike" data-id="0" style="left:3190px; bottom:680px;"></div>
+<div class="spike" data-id="0" style="left:3210px; bottom:680px;"></div>
+<div class="spike" data-id="0" style="left:3230px; bottom:680px;"></div>
+
+
+<div class="spike" data-id="0" style="left:3320px; bottom:680px;"></div>
+<div class="spike" data-id="0" style="left:3340px; bottom:680px;"></div>
+<div class="spike" data-id="0" style="left:3360px; bottom:680px;"></div>
+<div class="platform platform-h" data-id="0" style="left:3920px; bottom:520px; width:60px;"></div>
+
+        <div class="door" data-id="57" style="left:3400px; bottom:530px;" id="door"></div>
+    
+    
+    
+
+      </div>
+</div>
+
+
+</body>
+<SCRIpt>
+document.getElementById("nextBtn").addEventListener("click", function(){
+
+    let unlockedLevel = parseInt(localStorage.getItem("unlockedLevel"));
+    let currentLevel = 10; //change level
+
+    if(unlockedLevel <= currentLevel){
+        localStorage.setItem("unlockedLevel", currentLevel + 1);
+    }
+
+    window.location.href = "lv.html";
+});
+
+
+</SCRIpt>
+<script>
+let unlockedLevel = localStorage.getItem("unlockedLevel");
+
+if(!unlockedLevel){
+    localStorage.setItem("unlockedLevel",1);
+    unlockedLevel = 1;
+}
+
+unlockedLevel = parseInt(unlockedLevel);
+
+let currentLevel = 10; //change level
+
+if(currentLevel > unlockedLevel){
+    alert("❌ Level Not Unlocked!");
+    window.location.href = "lv.html";
+}
+</script>
+
+
+<script src="js/all-level.js"></script>
+</html> 

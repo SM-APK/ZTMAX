@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Level </title>
+    <link rel="stylesheet" href="css/all-level-format.css">
+    <style>
+        .game-area{
+  position:relative;
+  width:20000px;  
+  height:1100px;
+  overflow:hidden;
+  will-change: transform;
+}
+.platform, .platform-1{
+  position:absolute;
+  height:40px;
+  background:orange;
+  border-top:5px solid orange;
+}
+
+.ground{
+  width:900px;
+  bottom:400px;
+  left:0;
+}
+
+.void{
+  background-color: black;
+  width: 100%;
+  height: 360px;
+}
+    </style>
+</head>
+<body>    <div class="game-wrapper">
+<header class="heading">
+    <h1 class="title">LEVEL 4</h1> <!--change level-->
+    <div id="menuToggle" class="menuBtn">
+        <div class="menuLines"></div>
+    </div>
+</header>
+
+
+<div class="menu-overlay" id="menuOverlay">
+    <div class="menu-box">
+        <h2 class="menu-heading">Game Menu</h2>
+        <button class="menu-item" id="back">Back Level List</button>
+        <button class="menu-item" id="restart">Restart</button>
+        <button class="menu-item" id="pause">Pause</button>
+    </div>
+</div>
+
+<!-- GAME OVER POPUP -->
+<div class="gameover-overlay" id="gameOverPopup">
+  <div class="gameover-box">
+    <h2>💀 GAME OVER</h2>
+    <button id="retryBtn">RETRY</button>
+  </div>
+</div>
+
+<!-- LEVEL COMPLETE POPUP -->
+<div class="levelCompletePopup" id="levelCompletePopup">
+    <div class="completeBox">
+        <h2> LEVEL COMPLETE</h2>
+        <button id="nextBtn">Next Level ➜</button>
+    </div>
+</div>
+<div class="control-101">
+<!-- 🔥 CONTROLS OUTSIDE GAME AREA -->
+<button class="control-bnt" id="jump">JUMP</button>
+<button class="control-bnt" id="down">DOWN</button>       
+<button class="control-bnt" id="right">RIGHT</button>
+<button class="control-bnt" id="left">LEFT</button>
+
+</div>
+    <div class="game-area">
+        <div class="sky"></div>
+<div class="player" id="player">
+  <div class="head"></div>
+
+  <div class="body">
+    <div class="arm left">
+      <div class="forearm"></div>
+    </div>
+
+    <div class="arm right">
+      <div class="forearm"></div>
+    </div>
+  </div>
+
+  <div class="leg left">
+    <div class="lower-leg"></div>
+  </div>
+
+  <div class="leg right">
+    <div class="lower-leg"></div>
+  </div>
+</div>
+        <div class="platform ground"></div>
+<!-- SPIKES -->
+<div class="spike" style="left:600px; bottom:440px;"></div>
+<div class="spike" style="left:620px; bottom:440px;"></div>
+<div class="spike" style="left:640px; bottom:440px;"></div>
+ <div class="platform-1 fake-platform" data-id="3" style="left:900px; bottom:400px; width:120px;"></div>
+<div class="platform" data-id="0" style="left:1020px; bottom:400px; width:200px;"></div>
+<div class="spike" style="left:1000px; bottom:440px;"></div>
+<div class="spike" style="left:1020px; bottom:440px;"></div>
+<div class="spike" style="left:1040px; bottom:440px;"></div>
+ <div class="platform-1 fake-platform" data-id="3" style="left:900px; bottom:400px; width:120px;"></div>
+<div class="platform" data-id="0" style="left:1220px; bottom:400px; width:200px;"></div>
+<div class="platform" data-id="6" style="left:1420px; bottom:490px; width:200px;"></div>
+<div class="platform" data-id="0" style="left:1880px; bottom:490px; width:200px;"></div>
+
+
+        <div class="door" style="left:2000px; bottom:540px;" id="door"></div>
+    </div>
+</div>
+
+</body>
+<SCRIpt>
+document.getElementById("nextBtn").addEventListener("click", function(){
+
+    let unlockedLevel = parseInt(localStorage.getItem("unlockedLevel"));
+    let currentLevel = 4; //change level
+
+    if(unlockedLevel <= currentLevel){
+        localStorage.setItem("unlockedLevel", currentLevel + 1);
+    }
+
+    window.location.href = "lv.html";
+});
+
+
+</SCRIpt>
+<script>
+let unlockedLevel = localStorage.getItem("unlockedLevel");
+
+if(!unlockedLevel){
+    localStorage.setItem("unlockedLevel",1);
+    unlockedLevel = 1;
+}
+
+unlockedLevel = parseInt(unlockedLevel);
+
+let currentLevel = 4; //change level
+
+if(currentLevel > unlockedLevel){
+    alert("❌ Level Not Unlocked!");
+    window.location.href = "lv.html";
+}
+</script>
+
+
+<script src="js/all-level.js"></script>
+</html> 
