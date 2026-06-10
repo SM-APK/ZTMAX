@@ -25,7 +25,7 @@ tabs: [
     { name: "Product Sell & Buy", link: "Product-sell-buy.html" },
     { name: "Construction Work", link: "Construction.html" },
     { name: "Car Game", link: "CAR-GAME/INDEX.HTML" },
-
+    { name: "Game coming soon", link: "GAME/index.html" },
 ],
 
     footer: {
