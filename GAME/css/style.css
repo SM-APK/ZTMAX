@@ -1,0 +1,160 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: BLACK;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+    }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+}
+
+.home-wrapper {
+    width: 2300px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+}
+.game-title {
+    margin: 30px auto;
+    padding: 10px 25px;
+    width: 550px;
+    height: 110px;
+
+    
+    font-family: 'Luckiest Guy', 'Orbitron', sans-serif;
+    font-size: 72px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #ffd966; 
+
+    
+    background: linear-gradient(
+        135deg,
+        #7a4a1e,
+        #9c5e2a,
+        #7a4a1e
+    );
+    border-radius: 35px;
+
+   
+    border: 5px solid #3a1f0a;
+
+  
+    text-shadow:
+        2px 2px 0 #5a2d0c,
+        4px 4px 0 #3a1f0a,
+        0 0 8px rgba(255, 217, 102, 0.8);
+
+ 
+    box-shadow:
+        0 8px 0 #3a1f0a,
+        0 12px 25px rgba(0, 0, 0, 0.6);
+
+    text-align: center;
+}
+
+
+.center-ui {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.start-btn {
+    padding: 35px 60px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #000000;
+    background: linear-gradient(
+        to bottom,
+        #e6e6e6,
+        #bfbfbf
+    );
+
+    border: 9px solid #666;
+    border-radius: 6px;
+    cursor: pointer;
+
+    
+    box-shadow:
+        0 6px 0 #888,
+        0 10px 20px rgba(0,0,0,0.6);
+
+    transition: all 0.12s ease;
+}
+
+
+.start-btn:hover {
+    filter: brightness(1.05);
+}
+
+.start-btn:active {
+    transform: translateY(6px);
+    box-shadow:
+        0 4px 0 #777,
+        0 6px 12px rgba(0,0,0,0.6);
+}
+
+.support {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+    opacity: 0.9;
+}
+
+.support a {
+    text-decoration: none;
+}
+
+
+.support a.instagram {
+    color: #E1306C; 
+}
+
+
+.support a.youtube {
+    color: #FF0000; 
+}
+
+.support a:hover {
+    color: inherit;
+    transform: none;
+}
+
+    .version {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        font-size: 14px;
+        opacity: 0.7;
+    }

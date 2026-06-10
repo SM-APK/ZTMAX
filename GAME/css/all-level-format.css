@@ -1,0 +1,699 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* scroll bhi band */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+
+.game-wrapper {
+  width: 2000px;   
+  height: 1300px;   
+  margin: 0;
+  
+    top: 50%;
+    left: 50%;
+        width: 100%;
+    height: 100%;
+  transform-origin: top left;
+  position: relative;
+           
+}
+
+
+
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+
+.heading {
+  position: relative;
+  color: white;
+  height: 90px;
+  display: flex;
+  font-family: 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+
+}
+.heading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  z-index: 2000;
+
+}
+
+
+.title {
+  position: fixed;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px black;
+  left: 100px;
+  top: 8px;
+}
+.menuBtn{
+    position:fixed;
+    top:15px;
+    left: 20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(145deg,#7a4a22,#4a2a12);
+    border:4px solid #3e220e;
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,0.6),
+        0 6px 12px rgba(0,0,0,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.25s;
+    z-index:1000;
+}
+
+
+
+.menuBtn:hover{
+    transform:scale(1.08);
+}
+
+.menuBtn:active{
+    transform:scale(0.95);
+}
+
+/* Full Button Rotate + Red Background */
+.menuBtn.active{
+    background:#c40000;
+    transform: rotate(180deg);
+}
+.menuLines{
+    width:25px;
+    height:3px;
+    background:white;
+    position:relative;
+    border-radius:2px;
+    transition:0.3s ease;
+}
+
+.menuLines::before,
+.menuLines::after{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:3px;
+    background:white;
+    left:0;
+    border-radius:2px;
+    transition:0.3s ease;
+}
+
+.menuLines::before{
+    top:-8px;
+}
+
+.menuLines::after{
+    top:8px;
+}
+
+/* Cross */
+.menuBtn.active .menuLines{
+    background: transparent;
+}
+
+.menuBtn.active .menuLines::before{
+    top:0;
+    transform: rotate(45deg);
+}
+
+.menuBtn.active .menuLines::after{
+    top:0;
+    transform: rotate(-45deg);
+}
+
+
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2650px;
+  height: 1300px;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+.menu-box {
+  position: fixed;
+  top: 300px;
+  left: 850px;
+  background: radial-gradient(circle at top, #2b0000, #120000 70%);
+  padding: 40px;
+  border-radius: 20px;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  box-shadow:
+      inset 0 0 40px rgba(0,0,0,0.9),
+      0 0 30px rgba(255,0,0,0.4),
+      0 0 80px rgba(150,0,0,0.6);
+  border: 4px solid #3a0000;
+  animation: popup 0.3s ease;
+}
+
+/* Horror Heading */
+.menu-heading {
+  color: #ff2a2a;
+  margin-bottom: 20px;
+  font-size: 46px;
+  letter-spacing: 4px;
+  text-shadow:
+      0 0 10px #ff0000,
+      0 0 20px #8b0000,
+      2px 2px 5px black;
+  font-family: 'Cinzel', serif;
+}
+
+/* Horror Buttons */
+.menu-item {
+  width: 500px;
+  height: 80px;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 26px;
+  border: 2px solid #550000;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #3a0000, #1a0000);
+  color: #ff4d4d;
+  font-weight: bold;
+  transition: 0.4s;
+  box-shadow:
+      inset 0 0 15px rgba(0,0,0,0.8),
+      0 0 15px rgba(255,0,0,0.4);
+}
+
+/* Hover Effect - Creepy Glow */
+.menu-item:hover {
+  transform: scale(1.07);
+  background: linear-gradient(to right, #5c0000, #2a0000);
+  box-shadow:
+      0 0 20px red,
+      0 0 40px darkred;
+  letter-spacing: 2px;
+}
+.close-btn {
+  background: linear-gradient(to right, #b71c1c, #7f0000);
+}
+
+
+.menu{
+  padding: 10px 20px;
+  
+}
+.menuLines{
+    width:22px;
+    height:3px;
+    background:#f5deb3;
+    position:relative;
+    border-radius:2px;
+    transition:0.3s ease;
+}
+
+.menuLines::before,
+.menuLines::after{
+    content:"";
+    position:absolute;
+    width:22px;
+    height:3px;
+    background:#f5deb3;
+    left:0;
+    border-radius:2px;
+    transition:0.3s ease;
+}
+
+.menuLines::before{
+    top:-7px;
+}
+
+.menuLines::after{
+    top:7px;
+}
+.menuBtn.active .menuLines{
+    background: transparent;
+}
+
+.menuBtn.active .menuLines::before{
+    top:0;
+    transform: rotate(45deg);
+}
+
+.menuBtn.active .menuLines::after{
+    top:0;
+    transform: rotate(-45deg);
+}
+
+.game-area{
+  background-color: black;
+    position: absolute;
+  top: 0;
+  left: 0;
+}
+.sky {
+  background-color: rgb(6, 85, 105);
+  width: 100%;
+  height: 700px;
+}
+
+.player {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  bottom: 400px;
+  left: 100px;
+    transform: scaleX(-1); 
+}
+
+/* Head - Side View */
+.player .head {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 30px;
+  height: 25px;
+  background: black;
+  border-radius: 50% 60% 50% 50%;
+  
+}
+
+/* Body - slim side look */
+.player .body {
+  position: absolute;
+  top: 25px;
+  left: 21px;
+  width: 20px;
+  height: 30px;
+  background: black;
+  border-radius: 5px;
+}
+
+/* Arms (Upper Arm) */
+.player .arm {
+  position: absolute;
+  width: 8px;
+  height: 17px;
+  background: black;
+  top: 5px;
+  transform-origin: top center;
+}
+
+/* Left arm (back side) */
+.player .arm.left {
+  left: -3px;
+  transform: rotate(30deg);
+}
+
+/* Right arm (front side) */
+.player .arm.right {
+  right: -3px;
+  transform: rotate(-30deg);
+}
+
+/* Forearm (Elbow joint look) */
+.player .forearm {
+  position: absolute;
+  width: 8px;
+  height: 20px;
+  background: black;
+  top: 17px;
+  left: 0;
+  transform-origin: top center;
+  transform: rotate(16deg);
+}
+
+/* Upper Leg (Thigh) */
+.player .leg {
+  position: absolute;
+  width: 10px;
+  height: 17px;
+  background: black;
+  bottom: 0;
+  transform-origin: top center;
+  top: 50px;
+}
+
+/* Back leg */
+.player .leg.left {
+  left: 20px;
+  transform: rotate( 15deg);
+}
+
+/* Front leg */
+.player .leg.right {
+  left: 32px;
+  transform: rotate(-10deg);
+}
+
+/* Lower Leg (Knee joint look) */
+.player .lower-leg {
+  position: absolute;
+  width: 10px;
+  height: 15px;
+  background: black;
+  top: 17px;
+  transform-origin: top center;
+  transform: rotate(-15deg);
+}
+
+/* ===== SPIKES ===== */
+
+.spike, .spike-1{
+  position:absolute;
+  width:20px;
+  height:15px;
+  background:orange;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-bottom:4px solid orange;
+  box-shadow:orange;
+  z-index:5;
+}
+.spike-h{
+  transform: rotate(90deg);
+}
+/* Optional little glow animation */
+.spike{
+  animation: spikeGlow 1.2s infinite alternate;
+}
+
+@keyframes spikeGlow{
+  from{ box-shadow: 0 0 10px rgb(0, 0, 0); }
+  to{ box-shadow: 0 0 25px rgb(0, 0, 0); }
+}
+/* ===== PLAYER ANIMATION STATES ===== */
+
+.player.walking .leg.left {
+  animation: walkLegFront 0.4s infinite alternate;
+}
+
+.player.walking .leg.right {
+  animation: walkLegBack 0.4s infinite alternate;
+}
+
+.player.walking .arm.left {
+  animation: walkArmBack 0.4s infinite alternate;
+}
+
+.player.walking .arm.right {
+  animation: walkArmFront 0.4s infinite alternate;
+}
+
+/* WALK KEYFRAMES */
+
+@keyframes walkLegFront {
+  from { transform: rotate(-25deg); }
+  to   { transform: rotate(25deg); }
+}
+
+@keyframes walkLegBack {
+  from { transform: rotate(25deg); }
+  to   { transform: rotate(-25deg); }
+}
+
+@keyframes walkArmFront {
+  from { transform: rotate(35deg); }
+  to   { transform: rotate(-35deg); }
+}
+
+@keyframes walkArmBack {
+  from { transform: rotate(-35deg); }
+  to   { transform: rotate(35deg); }
+}
+
+
+/* ===== JUMP ===== */
+
+.player.jump .arm.left,
+.player.jump .arm.right {
+  transform: rotate(120deg);
+}
+
+.player.jump .leg.left {
+  transform: rotate(30deg);
+}
+
+.player.jump .leg.right {
+  transform: rotate(-10deg);
+}
+
+
+/* ===== FALL ===== */
+
+.player.fall .leg.left,
+.player.fall .leg.right {
+  transform: rotate(60deg);
+}
+
+.player.fall .arm.left,
+.player.fall .arm.right {
+  transform: rotate(-40deg);
+}
+#door {
+  width: 55px;
+  height: 105px;
+  border-radius: 20px 20px 0px 0px; 
+  background: linear-gradient(to bottom, #1e90ff 0%, #87cefa 100%); /* Heavenly blue inner glow */
+  position: absolute; 
+  box-shadow:
+    0 0 0 6px #ffd700,         /* Outer thick gold border */
+    0 0 25px rgba(255, 223, 0, 0.5); /* Golden outer glow */
+}
+
+
+.control-101 {
+    position: fixed;       
+  top: 770px;        
+    left: 30px;            
+    z-index: 3000;         
+    display: flex;         
+    pointer-events: auto;  
+    width: 2000px;
+    height: 150px;
+}
+
+.control-bnt {
+  position: absolute;  /* now relative to .control-101 */
+  width: 200px;
+  height: 95px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  background: linear-gradient(145deg, #ff9800, #e65100);
+  box-shadow:
+    0 6px 0 #bf360c,
+    0 8px 20px rgba(0,0,0,0.6);
+  transition: all 0.15s ease-in-out;
+  pointer-events: auto; /* buttons clickable again */
+}
+
+.control-bnt {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none;
+}
+.control-bnt:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 0 #bf360c,
+    0 10px 25px rgba(0,0,0,0.7);
+}
+
+
+.control-bnt:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #bf360c,
+    0 5px 15px rgba(0,0,0,0.5);
+}
+
+
+#left { left: 1%; top: 5%;  }
+#right { left: 13%; top: 5%;  }
+#down { left: 90%; top: 5%;  }
+#jump { left: 102%; top: 5%; }
+/* Overlay – sirf width height confirm same */
+.gameover-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:2650px;
+  height:1300px;
+  background: rgba(0,0,0,0.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:3000;
+}
+
+.gameover-box{
+  position: fixed;
+  top: 390px;
+  left: 850px;
+  width: 600px;
+  height: 220px;   /* height kam ki */
+
+  padding:35px;
+  text-align:center;
+  border-radius:10px;
+
+  background: linear-gradient(180deg, #000000 0%, #1a0000 100%);
+  border: 3px solid #ff0000;
+
+  box-shadow:
+    0 0 40px rgba(255,0,0,0.7),
+    inset 0 0 60px rgba(255,0,0,0.2);
+
+  animation: popup 0.3s ease;
+}
+
+/* Glitch style GAME OVER text */
+.gameover-box h2{
+  font-size:48px;
+  color:#ffffff;
+  margin-bottom:35px;
+  letter-spacing:5px;
+  text-shadow:
+      2px 2px 0 red,
+      -2px -2px 0 darkred,
+      0 0 15px crimson;
+}
+
+/* Retry button – different style (not menu type) */
+#retryBtn{
+  width: 260px;
+  height: 65px;
+  font-size:22px;
+  font-weight:bold;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+
+  background:#ff0000;
+  color:white;
+
+  box-shadow:
+      0 0 20px red,
+      0 5px 0 darkred;
+
+  transition:0.2s ease;
+}
+
+#retryBtn:hover{
+  transform: translateY(4px);
+  box-shadow:
+      0 0 30px red,
+      0 2px 0 darkred;
+  background:#cc0000;
+}
+/* LEVEL COMPLETE POPUP */
+
+.levelCompletePopup{
+    position: fixed;
+    top:0;
+    left:0;
+    width:2650px;
+    height:1300px;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.6);
+    z-index:3000;
+}
+
+.completeBox{
+    position: fixed;
+  top: 440px;
+  left: 850px;
+  width: 600px;
+  height: 120px; 
+    background: linear-gradient(145deg,#1b5e20,#2e7d32);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 0 40px #00ff88;
+    border:4px solid #00ff88;
+    animation: popupScale 0.3s ease;
+}
+
+.completeBox h2{
+    color:#00ffcc;
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.completeBox p{
+    color:white;
+    margin-bottom:20px;
+}
+
+.completeBox button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    background: linear-gradient(to right,#00c853,#00e676);
+    color:black;
+    box-shadow:0 6px 0 #009624;
+    transition:0.2s;
+}
+
+.completeBox button:active{
+    transform: translateY(4px);
+    box-shadow:0 2px 0 #009624;
+}
+
+@keyframes popupScale{
+    from{ transform: scale(0.6); opacity:0; }
+    to{ transform: scale(1); opacity:1; }
+}
+
